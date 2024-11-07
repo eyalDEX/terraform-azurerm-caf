@@ -221,7 +221,7 @@ resource "azurerm_container_app" "ca" {
 
         content {
           certificate_binding_type = try(custom_domain.value.certificate_binding_type, null)
-          certificate_id           = can(custom_domain.value.certificate_id) ? custom_domain.value.certificate_id : var.combined_resources.container_app_environment_certificates[try(custom_domain.value.lz_key, var.client_config.landingzone_key)][custom_domain.value.certificate_key].id
+          certificate_id           = try(custom_domain.value.certificate_id,null) #can(custom_domain.value.certificate_id) ? custom_domain.value.certificate_id : var.combined_resources.container_app_environment_certificates[try(custom_domain.value.lz_key, var.client_config.landingzone_key)][custom_domain.value.certificate_key].id
           name                     = custom_domain.value.name
         }
       }
