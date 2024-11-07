@@ -227,7 +227,7 @@ resource "azurerm_container_app" "ca" {
       }
 
       dynamic "traffic_weight" {
-        for_each = try(ingress.value.traffic_weight, {})
+        for_each = try(ingress.value.traffic_weight, [])
 
         content {
           label           = traffic_weight.value.label
