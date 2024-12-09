@@ -12,6 +12,10 @@ variable "location" {
 variable "resource_group" {
   description = "Resource group object to deploy the resource"
 }
+variable "region" {
+type = string 
+default = null
+}
 
 variable "resource_group_name" {
   description = "Name of the existing resource group to deploy the resource"
