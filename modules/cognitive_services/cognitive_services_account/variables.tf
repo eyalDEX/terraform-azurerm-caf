@@ -12,7 +12,7 @@ variable "location" {
 variable "resource_group" {
   description = "Resource group object to deploy the resource"
 }
-variable "region" {
+variable "region_pe" {
 type = string 
 default = null
 }
