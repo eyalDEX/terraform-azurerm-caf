@@ -350,9 +350,9 @@ variable "keyvault_certificate_issuers" {
   description = "Configuration object - Azure Key Vault Certificate Issuers resources"
   default     = {}
 }
-variable "cosmos_dbs" {
-   default = {}
- }
+#variable "cosmos_dbs" {
+#   default = {}
+# }
 
 variable "app_config" {
   default = {}
