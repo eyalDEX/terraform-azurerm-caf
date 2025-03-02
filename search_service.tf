@@ -1,6 +1,6 @@
 module "search_service" {
   source   = "./modules/search_service"
-  for_each = local.search_services.search_services
+  for_each = local.search_services.ai_search_services
 
   client_config       = local.client_config
   global_settings     = local.global_settings
