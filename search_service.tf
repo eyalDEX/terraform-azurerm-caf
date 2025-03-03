@@ -1,5 +1,6 @@
+
 output "search_service_test" {
-  value = local.search_services
+  value = var.search_services
 }
 
 module "search_service" {
