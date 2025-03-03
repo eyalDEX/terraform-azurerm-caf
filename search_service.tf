@@ -1,3 +1,7 @@
+output "search_service_test" {
+  value = local.search_services
+}
+
 module "search_service" {
   source   = "./modules/search_service"
   for_each = local.search_services.ai_search_services
